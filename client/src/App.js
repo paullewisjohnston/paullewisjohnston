@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
-import AppNavbar from './components/AppNavbar';
-import ShoppingList from './components/ShoppingList';
+import { MuiThemeProvider} from '@material-ui/core/styles';
+import theme from './theme';
+
+import AppNavBar from './components/AppNavBar';
+import ItemContainer from './components/ItemContainer';
 import ItemModal from './components/ItemModal';
-import { Container } from 'reactstrap';
 
 import { Provider } from 'react-redux';
 import store from './store';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
 class App extends Component {
   render() {
     return (
+      <MuiThemeProvider theme={theme}>
       <Provider store={store}>
-        <div className="App">
-          <AppNavbar />
-          <Container>
-            <ItemModal />
-            <ShoppingList />
-          </Container>
+        <div className="App" margin="100px" padding="100px">
+          <AppNavBar color="Black"/>
+          <ItemModal />
+          <ItemContainer />
         </div>
       </Provider>
+      </MuiThemeProvider>
     );
   }
 }
-
 export default App;
