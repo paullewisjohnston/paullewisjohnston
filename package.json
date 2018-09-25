@@ -21,6 +21,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
-  },
-  "proxy": "http://api.paullewisjohnston.com"
+  }
 }
