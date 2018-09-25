@@ -23,7 +23,7 @@ export const addItem = item => dispatch => {
 };
 
 export const deleteItem = id => dispatch => {
-  axios.delete(`items/${id}`).then(res =>
+  axios.delete(`${url}/items/${id}`).then(res =>
     dispatch({
       type: DELETE_ITEM,
       payload: id
