@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Container, List, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux';
 import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
@@ -18,31 +17,14 @@ class ShoppingList extends Component {
     const { items } = this.props.item;
     return (
       <Container>
-        <ListGroup>
-          <TransitionGroup className="shopping-list">
-            {items.map(({ _id, name, year, description, height, width, depth, status }) => (
-              <CSSTransition key={_id} timeout={500} classNames="fade">
-                <ListGroupItem>
-                  <Button
-                    className="remove-btn"
-                    color="danger"
-                    size="sm"
-                    onClick={this.onDeleteClick.bind(this, _id)}
-                  >
-                    &times;
-                  </Button>
+        <List>
+            {items.map(({ _id, name, color, icon}) => (
+                <List.Item>
+                  <Button circular color = {color} size='massive' icon={icon} onClick={this.onDeleteClick.bind(this, _id)}/>
                   {name}
-                  {year}
-                  {description}
-                  {height}
-                  {width}
-                  {depth}
-                  {status}
-                </ListGroupItem>
-              </CSSTransition>
+                </List.Item>
             ))}
-          </TransitionGroup>
-        </ListGroup>
+        </List>
       </Container>
     );
   }
