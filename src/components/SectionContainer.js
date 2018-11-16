@@ -22,7 +22,7 @@ class SectionContainer extends Component {
     return (
       <div style={{padding: '60px 0 0' }}>
           {items.map(item => ([
-            <Segment secondary key={item._id} vertical>
+            <Segment key={item._id} vertical>
               <Button icon onClick={this.onDeleteClick.bind(this, item._id)}>
                 <Icon name='delete' />
               </Button>

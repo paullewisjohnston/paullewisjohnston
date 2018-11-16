@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Grid, Image } from 'semantic-ui-react'
 
-const Job = (props) => (
-    <Container>
+const location = (props) => (
+    <Container inverted>
       <Grid inverted stackable>
         <Grid.Row verticalAlign='middle'>
           <Grid.Column only='mobile' textAlign='center' width={4}>
@@ -22,4 +22,4 @@ const Job = (props) => (
     </Container>
 );
 
-export default Job
+export default location

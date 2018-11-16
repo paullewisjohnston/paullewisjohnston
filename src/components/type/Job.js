@@ -10,6 +10,7 @@ const Job = (props) => (
           </Grid.Column>
           <Grid.Column verticalAlign='middle' width={12}>
             <h1><b>{props.item.heading1},</b> {props.item.heading2}</h1>
+            <p>{props.item.heading3}</p>
             <p>{props.item.dateStart}-{props.item.dateStart}</p>
             <p>{props.item.paragraph1}</p>
             <p>Skills: {props.item.paragraph2}</p>
