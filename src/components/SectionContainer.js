@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Segment, Button, Icon} from 'semantic-ui-react'
 import { connect } from 'react-redux';
-import { getItems, deleteItem } from '../actions/itemActions';
+import { getItems, deleteItem} from '../actions/itemActions';
 import Job from './type/Job';
 import Location from './type/Location';
 import Education from './type/Education';
