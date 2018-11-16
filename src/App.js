@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GlobalNav from './components/GlobalNav';
+import './App.css'
 
 import { Provider } from 'react-redux';
 import store from './store';

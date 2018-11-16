@@ -1,75 +1,40 @@
 import React, {Component} from 'react'
-import { connect } from 'react-redux';
-import { getNavs, addNav } from '../actions/navActions';
-import PropTypes from 'prop-types';
-import {Menu, Sidebar, Icon} from 'semantic-ui-react'
-import PageContainer from './page/PageContainer';
-import ItemForm from './ItemForm';
-import NavForm from './NavForm';
-import ItemSearch from './ItemSearch';
+import {Image, Container, Menu, Icon} from 'semantic-ui-react'
+import SectionContainer from './SectionContainer';
+import ItemModal from './ItemModal';
 import Logo from '../assets/logo.png';
 
-class GlobalNav extends Component {
-  componentDidMount() {
-    this.props.getNavs();
-  }
 
+export default class GlobalNav extends Component {
   state = {}
 
-  onClick = (e, { name }) => {
-    if(this.state.visible===name)
-      this.setState({ visible: ''})
-    else
-      this.setState({ visible: name})
-  }
-
-  sidebarHide = () => {this.setState({ visible: ''})}
+  onClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { visible,dimmed } = this.state;
-    //const { navs } = this.props.nav;
-    //const nav = navs.pop();
-
+    //const { activeItem } = this.state
     return (
-      <div style={{height:'100vh', width:'100vw',display:'flex', flexDirection:'row'}}>
-      <div style={{height:'100vh', width:'60px', background:'grey'}}>
-        <Menu borderless icon inverted vertical visible width='very thin' style={{height:'50vh', width:'60px', background:'grey'}}>
-        <Menu.Item name='home' as='a' onClick={this.onClick}>
-           <img src={Logo} alt=''/>
-        </Menu.Item>
-        <Menu.Item name='plus' as='a' onClick={this.onClick}>
-          <Icon color ='white' size='large' name='plus' />
-        </Menu.Item>
-        <Menu.Item name='user' as='a' onClick={this.onClick}>
-          <Icon color ='white' size='large' name='user' />
-        </Menu.Item>
-      </Menu>
-    </div>
-      <Sidebar.Pushable>
-        <Sidebar as={Menu} borderless animation='overlay' icon inverted color='teal' vertical visible={visible === 'user'} width='wide'>
-          <Menu.Item as='a' disabled>
-            <ItemForm/>
-          </Menu.Item>
-        </Sidebar>
-        <Sidebar.Pusher dimmed={visible} style={{height:'100vh'}}>
-          <PageContainer/>
-        </Sidebar.Pusher>
-      </Sidebar.Pushable>
-    </div>
+      <div>
+        <Menu borderless fixed='top'>
+          <Container>
+            <Menu.Item fitted='horizontally' as='a'onClick={this.onClick}>
+              <Image size='mini' src={Logo} style={{ marginRight: '10px'}}/>
+              <p style={{fontFamily:'Arima Madurai, cursive', fontSize:'26px'}}>paullewisjohnston</p>
+            </Menu.Item>
+            <Menu.Menu fitted='horizontally' position='right'>
+              <Menu.Item icon name='Github' as='a' href='//github.com/paullewisjohnston' target='_blank'>
+                <Icon name='github' size='big'/>
+              </Menu.Item>
+              <Menu.Item icon name='Home' as='a' href='//linkedin.com/in/paul-lewis-johnston-3abb6b100/' target='_blank'>
+                <Icon name='linkedin' size='big'/>
+              </Menu.Item>
+              <Menu.Item icon name='Add Item' as='a'>
+                <ItemModal/>
+              </Menu.Item>
+            </Menu.Menu>
+          </Container>
+        </Menu>
+        <SectionContainer/>
+      </div>
     )
   }
 }
-
-GlobalNav.propTypes = {
-  getNavs: PropTypes.func.isRequired,
-  nav: PropTypes.object.isRequired
-};
-
-const mapStateToProps = state => ({
-  nav: state.nav
-});
-
-export default connect(
-  mapStateToProps,
-  { getNavs, addNav}
-)(GlobalNav);
