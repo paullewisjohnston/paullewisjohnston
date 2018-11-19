@@ -1,6 +1,5 @@
-import React, {Component} from 'react'
-import {Image, Container, Menu, Icon} from 'semantic-ui-react'
-import SectionContainer from './SectionContainer';
+import React, {Component} from 'react';
+import {Image, Container, Menu, Icon} from 'semantic-ui-react';
 import ItemModal from './ItemModal';
 import Logo from '../assets/logo.png';
 
@@ -33,7 +32,6 @@ export default class GlobalNav extends Component {
             </Menu.Menu>
           </Container>
         </Menu>
-        <SectionContainer/>
       </div>
     )
   }
