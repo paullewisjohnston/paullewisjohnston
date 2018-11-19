@@ -6,6 +6,7 @@ import Job from './type/Job';
 import Location from './type/Location';
 import Education from './type/Education';
 import Project from './type/Project';
+import EditItemForm from './EditItemForm';
 import PropTypes from 'prop-types';
 
 class SectionContainer extends Component {
@@ -26,6 +27,7 @@ class SectionContainer extends Component {
               <Button icon onClick={this.onDeleteClick.bind(this, item._id)}>
                 <Icon name='delete' />
               </Button>
+              <EditItemForm item={item}/>
                 {(item.type==='job' && <Job item={item}/>)}
                 {(item.type==='eduction'  && <Education item={item}/>)}
                 {(item.type==='location'  && <Location item={item}/>)}

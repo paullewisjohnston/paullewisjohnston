@@ -1,6 +1,8 @@
 import {
   GET_ITEMS,
+  GET_ITEM_BY_ID,
   ADD_ITEM,
+  EDIT_ITEM,
   DELETE_ITEM,
   ITEMS_LOADING
 } from '../actions/types';
@@ -17,6 +19,17 @@ export default function(state = initialState, action) {
         ...state,
         items: action.payload,
         loading: false
+      };
+    case GET_ITEM_BY_ID:
+      return {
+        ...state,
+        item: action.payload,
+        loading: false
+      };
+    case EDIT_ITEM:
+      return {
+        ...state.items.filter(item => item._id !== action.payload._id),
+        items: [action.payload, ...state.items]
       };
     case DELETE_ITEM:
       return {

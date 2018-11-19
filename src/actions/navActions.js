@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { GET_NAVS, ADD_NAV, DELETE_NAV, NAVS_LOADING } from './types';
 
-const url = 'http://api.paullewisjohnston.com'
+const url = 'http://paullewisjohnston-server.herokuapp.com'
 
 export const getNavs = () => dispatch => {
   dispatch(setNavsLoading());
