@@ -1,5 +1,5 @@
 {
-  "homepage": "http://gitname.github.io/paullewisjohnston",
+  "homepage": "https://paullewisjohnston.github.io",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -24,7 +24,6 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "webpack-merge": "^4.1.0"
+    "gh-pages": "^2.0.1"
   }
 }
