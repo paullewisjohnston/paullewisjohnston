@@ -11,7 +11,7 @@ export default class GlobalNav extends Component {
           <Container>
             <Menu.Item fitted='horizontally' as='a'>
               <Image size='mini' src={Logo} style={{ marginRight: '10px'}}/>
-              <p style={{fontSize:'20px',fontWeight:'normal'}}>Paul Lewis Johnston</p>
+              <p style={{fontSize:'24px',fontFamily:'Arima Madurai, cursive'}}>paullewisjohnston</p>
             </Menu.Item>
             <Menu.Menu fitted='horizontally' position='right'>
               <Menu.Item icon name='Github' as='a' href='//github.com/paullewisjohnston' target='_blank'>
