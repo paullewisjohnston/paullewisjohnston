@@ -1,0 +1,41 @@
+[
+  {
+    "type" : "job",
+    "company" : "The Coca-Cola Company",
+    "role" : "Technical Leadership Intern",
+    "location" : "Atlanta, US",
+    "description" : "The USNI Mentorship programme connects future business leaders from Northern Ireland with high profile US corporations. Day-to-day work involves Digital Automation and Transformation projects, whilst being mentored in leadership and strategy.  ",
+    "skills" : "Leadership, Business Process Mapping, Project Management, SQL, Sharepoint, PowerBI.",
+    "daterange" : "Jan 2018 – Present",
+    "image" : "cocacola.png"
+  },
+  {
+    "type" : "job",
+    "company" : "Cora Systems",
+    "role" : "Graduate Technical Consultant",
+    "location" : "Carrick-On-Shannon, Ireland",
+    "description" : "As part of the Solutions Engagement Team, I configured and demoed project management software for clients across multiple business verticals. I also studied International Business Management at IMI Dublin.",
+    "skills" : "HTML, CSS, Technical Communication, Public Speaking, Client Engagement.",
+    "daterange" : "Sept 2017 – Dec 2017",
+    "image" : "cora.png"
+  },
+  {
+    "type" : "job",
+    "company" : "Infosys",
+    "role" : "Web and Mobile Developer",
+    "location" : "Bangalore, India",
+    "description" : "Instep Global Internship Program in Bangalore, India. I developed the backend of a social media talent network, used internally by over 200,000 employees.  The talent network mapped out all interconnections between employees within the company. Created recommendation algorithms to give friend suggestions to employees based on commonalities and provided the shortest paths to connect through other employees. ",
+    "skills" : "Java, Neo4j, PostgreSQL, REST API, Android Studio.",
+    "daterange" : "May 2016 – Sept 2016 ",
+    "image" : "infosys.png"
+  },
+  {
+    "type" : "job",
+    "company" : "Atlassian",
+    "role" : "Technical Business Analyst",
+    "location" : "Amsterdam, Netherlands",
+    "description" : "I helped break down real-world problems, measure them, and figure out how to solve them. I built advanced dashboards/reports with Business Intelligence Tools that drove business insights. I communicated my findings to others, helping them make informed decisions about priorities and direction. Explored and analysed business processes throughout the company, often working and collaborating across teams and offices.",
+    "skills" : "Data Science & Analytics, Data Modelling, Business Process Modelling, Python, SQL, R/RStudio, Dashboard UI.",
+    "image" : "atlassian.png"
+  }
+]
