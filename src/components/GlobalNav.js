@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Image, Container, Menu, Icon} from 'semantic-ui-react';
 import Logo from '../assets/logo.png';
 
-
 export default class GlobalNav extends Component {
   render() {
     return (
