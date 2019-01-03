@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { HashRouter as Router, Route} from "react-router-dom";
 import GlobalNav from './components/GlobalNav';
 import SectionContainer from './components/SectionContainer';
 import Dashboard from './components/Dashboard';
