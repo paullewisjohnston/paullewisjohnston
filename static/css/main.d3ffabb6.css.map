@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,wBACE,YACA,gCAAqC,CAEvC,kBACE,eAAoB","file":"static/css/main.d3ffabb6.css","sourcesContent":["html, body, #app, #app>div {\n  height: 100%;\n  font-family: 'Open Sans', sans-serif;\n}\nh1,h2,h3,h4,h5,h6{\n  font-weight: normal;\n}\n\n\n\n// WEBPACK FOOTER //\n// ./src/App.css"],"sourceRoot":""}
