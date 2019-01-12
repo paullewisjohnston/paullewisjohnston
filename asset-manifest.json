@@ -1,9 +1,9 @@
 {
-  "main.css": "/static/css/main.fe3188d3.chunk.css",
-  "main.js": "/static/js/main.81daa2c0.chunk.js",
-  "main.js.map": "/static/js/main.81daa2c0.chunk.js.map",
-  "static/js/1.07873eaf.chunk.js": "/static/js/1.07873eaf.chunk.js",
-  "static/js/1.07873eaf.chunk.js.map": "/static/js/1.07873eaf.chunk.js.map",
+  "main.css": "/static/css/main.2b27c219.chunk.css",
+  "main.js": "/static/js/main.6e2e907b.chunk.js",
+  "main.js.map": "/static/js/main.6e2e907b.chunk.js.map",
+  "static/js/1.bb390f52.chunk.js": "/static/js/1.bb390f52.chunk.js",
+  "static/js/1.bb390f52.chunk.js.map": "/static/js/1.bb390f52.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/logo.png": "/static/media/logo.8c51d047.png",
@@ -11,8 +11,8 @@
   "static/media/infosys.png": "/static/media/infosys.0b0bc476.png",
   "static/media/qub.png": "/static/media/qub.85f99ca1.png",
   "static/media/cocacola.png": "/static/media/cocacola.8f268005.png",
-  "static/css/main.fe3188d3.chunk.css.map": "/static/css/main.fe3188d3.chunk.css.map",
+  "static/css/main.2b27c219.chunk.css.map": "/static/css/main.2b27c219.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.c4e70a85443068fe0db4afec8a7e0e60.js": "/precache-manifest.c4e70a85443068fe0db4afec8a7e0e60.js",
+  "precache-manifest.89e5b3c9db5278471c97a6ffacf87f51.js": "/precache-manifest.89e5b3c9db5278471c97a6ffacf87f51.js",
   "service-worker.js": "/service-worker.js"
 }
