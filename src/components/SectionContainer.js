@@ -2,20 +2,20 @@ import React from 'react';
 import {Divider, Segment} from 'semantic-ui-react'
 import Job from './type/Job';
 import Education from './type/Education';
-import ScrollBasedBezier from './svg/ScrollBasedBezier';
+import Border from './Border';
 
 const SectionContainer = (props) => {
   return(
     <div>
-      <Segment basic vertical style={{background:'#fbfbfb'}}>
-        <Divider horizontal >Education</Divider>
+      <Segment basic vertical style={{background:'#2E2E2E'}}>
+        <Divider inverted horizontal >Education</Divider>
       </Segment>
       {props.education.map(item => ([
         <Segment basic vertical style={{padding: '0 0'}}>
-          <Segment basic vertical style={{background:'#fbfbfb', padding: '4em 0em'}}>
+          <Segment basic vertical style={{background:'#2E2E2E', padding: '4em 0em', color:'#ffffff'}}>
             <Education item={item}/>
           </Segment>
-          <ScrollBasedBezier headerHeight={100} viewBoxHeight={20} background='#fbfbfb' fill='white'/>
+          <Border type='curved' scrollHeaderHeight={100} viewBoxHeight={20} background='#2E2E2E' fill='white'/>
         </Segment>
         ]))}
       <Segment basic vertical style={{background:'white', padding: '0 0'}}>
@@ -26,7 +26,7 @@ const SectionContainer = (props) => {
           <Job item={item}/>
         </Segment>
         ]))}
-      <ScrollBasedBezier headerHeight={550} viewBoxHeight={20} background='white' fill='#fbfbfb'/>
+      <Border type='curved' scrollHeaderHeight={550} viewBoxHeight={20} background='white' fill='#fbfbfb'/>
     </div>
     );
   }

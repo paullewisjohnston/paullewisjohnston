@@ -5,11 +5,11 @@ import {Container, Menu, Icon} from 'semantic-ui-react';
 export default class GlobalNav extends Component {
   render() {
     return (
-      <div style={{background:'#2E2E2E'}}>
-        <Menu inverted borderless style={{background:'#2E2E2E'}} >
+      <div style={{background:'#222222'}}>
+        <Menu inverted borderless style={{background:'#222222'}} >
           <Container>
             <Menu.Item fitted='horizontally' as={Link} to='/'>
-              <p style={{fontSize:'24px',fontFamily:'Arima Madurai, cursive'}}>Paul Lewis Johnston</p>
+              <p style={{fontSize:'24px',fontFamily:'Arima Madurai, cursive'}}>&nbsp;Paul Lewis Johnston&nbsp;</p>
             </Menu.Item>
             <Menu.Menu fitted='horizontally' position='right'>
               <Menu.Item icon name='Dashboard' as={Link} to='/dashboard'>

@@ -19,9 +19,8 @@ export default class Footer extends Component {
                 </List>
               </Grid.Column>
               <Grid.Column verticalAlign='middle' width={10}>
-                <Icon name='react' size='large'/>
                 <p>
-                  Developed using React & Semantic UI React. Hosted on Github Pages.
+                  Paul Lewis Johnston
                 </p>
               </Grid.Column>
             </Grid.Row>

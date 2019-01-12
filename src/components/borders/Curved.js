@@ -1,21 +1,20 @@
 import React from 'react';
-import ScrollArea from './ScrollArea'
-import BezierCurve from './BezierCurve'
+import ScrollArea from './curved/ScrollArea'
+import BezierCurve from './curved/BezierCurve'
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  children: PropTypes.func.isRequired,
-  headerHeight: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  scrollHeaderHeight: PropTypes.number.isRequired,
   viewBoxHeight: PropTypes.number.isRequired,
   fill: PropTypes.string.isRequired,
   background: PropTypes.string.isRequired
 };
 
-
-const ScrollBasedBezier = (props) => (
+const Curved = (props) => (
   <ScrollArea
     background={props.background}
-    topBuffer={props.headerHeight}
+    topBuffer={props.scrollHeaderHeight}
     areaHeight={
       window.innerHeight * 0.5
     }
@@ -60,6 +59,7 @@ const ScrollBasedBezier = (props) => (
       );
     }}
   </ScrollArea>
+
 );
 
 
@@ -68,6 +68,6 @@ const getInterpolatedValue = (y1, y2, x) => {
   return a * x + y1;
 }
 
-ScrollBasedBezier.propTypes = propTypes;
+Curved.propTypes = propTypes;
 
-export default ScrollBasedBezier
+export default Curved
