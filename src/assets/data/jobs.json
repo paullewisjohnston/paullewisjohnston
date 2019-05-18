@@ -1,6 +1,16 @@
 [
   {
     "type" : "job",
+    "company" : "Universal Music Group",
+    "role" : "Junior Business Analyst",
+    "location" : "London, UK",
+    "description" : "As a Business Analyst on the Application Development Team for Universal Production Music, my role involves liasing between the business and the Software Development Teams to plan & prioritise feature implementation, explore/review ideas and drive the direction of the application.  ",
+    "skills" : "Business Analysis, Business Process Mapping, Project Management, SQL, Agile Sprint Planning & Prioritisation.",
+    "daterange" : "Jan 2018 – Present",
+    "image" : "umg.jpg"
+  },
+  {
+    "type" : "job",
     "company" : "The Coca-Cola Company",
     "role" : "Flavor Supply - Digital Automation",
     "location" : "Atlanta, US",

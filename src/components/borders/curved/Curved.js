@@ -1,6 +1,6 @@
 import React from 'react';
-import ScrollArea from './curved/ScrollArea'
-import BezierCurve from './curved/BezierCurve'
+import ScrollArea from './ScrollArea'
+import BezierCurve from './BezierCurve'
 import PropTypes from 'prop-types';
 
 const propTypes = {

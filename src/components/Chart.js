@@ -1,18 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Line from './charts/Line';
-import Pie from './charts/Pie';
+import StackedArea from './charts/StackedArea';
 
 const propTypes = {
-  type: PropTypes.oneOf(['line','pie']),
+  type: PropTypes.oneOf(['stacked-area']),
 };
 
 const Chart = (props) => {
   switch(props.type) {
-    case 'line':
-      return <Line {...props} />;
-    case 'pie':
-      return <Pie {...props} />;
+    case 'stacked-area':
+      return <StackedArea {...props} />;
     default:
       return null;
     }

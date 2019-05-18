@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Curved from './borders/Curved';
+import Curved from './borders/curved/Curved';
 
 const propTypes = {
   type: PropTypes.oneOf(['curved']),

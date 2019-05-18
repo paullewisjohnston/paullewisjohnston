@@ -12,10 +12,10 @@ const SectionContainer = (props) => {
       </Segment>
       {props.education.map(item => ([
         <Segment basic vertical style={{padding: '0 0'}}>
-          <Segment basic vertical style={{background:'#2E2E2E', padding: '4em 0em', color:'#ffffff'}}>
+          <Segment basic vertical style={{background:item.background, padding: '4em 0em', color:'#ffffff'}}>
             <Education item={item}/>
           </Segment>
-          <Border type='curved' scrollHeaderHeight={100} viewBoxHeight={20} background='#2E2E2E' fill='white'/>
+          <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={item.background} fill={item.backgroundNext}/>
         </Segment>
         ]))}
       <Segment basic vertical style={{background:'white', padding: '0 0'}}>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Icon, Segment, Grid, List, Header, Divider, Image, Container} from 'semantic-ui-react';
+import {Segment, Grid, List, Header, Divider, Image, Container} from 'semantic-ui-react';
 import Logo from '../assets/logo.png';
 
 
