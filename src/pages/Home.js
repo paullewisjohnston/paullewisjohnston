@@ -1,5 +1,4 @@
 import React from 'react';
-import {Divider, Segment} from 'semantic-ui-react';
 import SectionContainer from '../components/SectionContainer';
 import data from '../assets/data/data.json';
 

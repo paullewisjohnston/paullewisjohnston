@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route} from "react-router-dom";
 import GlobalNav from './components/GlobalNav';
-import SectionContainer from './components/SectionContainer';
-import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
 import Home from './pages/Home.js';
 import './App.css'
