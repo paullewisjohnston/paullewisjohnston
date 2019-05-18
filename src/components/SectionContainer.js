@@ -7,26 +7,30 @@ import Border from './Border';
 const SectionContainer = (props) => {
   return(
     <div>
-      <Segment basic vertical style={{background:'#2E2E2E'}}>
-        <Divider inverted horizontal >Education</Divider>
-      </Segment>
-      {props.education.map(item => ([
-        <Segment basic vertical style={{padding: '0 0'}}>
-          <Segment basic vertical style={{background:item.background, padding: '4em 0em', color:'#ffffff'}}>
-            <Education item={item}/>
+      {props.data.map(items => (
+        <div>
+        <Segment basic vertical style={{background:items.background}}>
+          <Divider inverted horizontal style={{color:items.color}}>{items.title}</Divider>
+        </Segment>
+        {items.data.map(item => (
+          <Segment basic vertical style={{padding: '0 0'}}>
+            <Segment basic vertical style={{background:item.background, padding: '4em 0em', color:item.color}}>
+              {(() => {
+                switch(item.type) {
+                  case 'education':
+                    return <Education item={item}/>;
+                  case 'job':
+                    return <Job item={item}/>;
+                  default:
+                    return null;
+                }
+              })()}
+            </Segment>
+            <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={item.background} fill={item.backgroundNext}/>
           </Segment>
-          <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={item.background} fill={item.backgroundNext}/>
-        </Segment>
-        ]))}
-      <Segment basic vertical style={{background:'white', padding: '0 0'}}>
-        <Divider horizontal>Work Experience</Divider>
-      </Segment>
-      {props.jobs.map(item => ([
-        <Segment padded basic vertical style={{background:'white', padding: '4em 0em'}}>
-          <Job item={item}/>
-        </Segment>
-        ]))}
-      <Border type='curved' scrollHeaderHeight={550} viewBoxHeight={20} background='white' fill='#fbfbfb'/>
+        ))}
+      </div>
+      ))}
     </div>
     );
   }

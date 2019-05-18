@@ -4,9 +4,7 @@ import GlobalNav from './components/GlobalNav';
 import SectionContainer from './components/SectionContainer';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
-import education from './assets/data/education.json';
-import jobs from './assets/data/jobs.json';
-import skills from './assets/data/skills.json';
+import Home from './pages/Home.js';
 import './App.css'
 
 class App extends Component {
@@ -15,8 +13,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <GlobalNav/>
-          <Route path="/" exact render={(props) => <SectionContainer {...props} jobs={jobs} education={education} skills={skills} />}/>
-          <Route path="/dashboard" exact render={(props) => <Dashboard {...props} jobs={jobs} education={education} skills={skills} />}/>
+          <Route path="/" exact render={(props) => <Home {...props}/>}/>
+          <Route path="/dashboard" exact render={(props) => <Home {...props}/>}/>
           <Footer/>
         </div>
       </Router>
