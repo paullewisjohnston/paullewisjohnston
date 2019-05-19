@@ -5,7 +5,7 @@ import data from '../assets/data/data.json';
 const Home = (props) => {
   return(
     <div>
-      <SectionContainer {...props} data={data}/>
+      <SectionContainer {...props} data={data} theme={props.theme}/>
     </div>
     );
   }

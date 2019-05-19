@@ -1,15 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import {Container, Menu, Icon} from 'semantic-ui-react';
 
-export default class GlobalNav extends Component {
-  render() {
+const GlobalNav = (props) => {
     return (
-      <div style={{background:'#222222'}}>
-        <Menu inverted borderless style={{background:'#222222'}} >
+      <div style={{background:props.theme.navbar}}>
+        <Menu inverted borderless style={{background:props.theme.navbar}} >
           <Container>
             <Menu.Item fitted='horizontally' as={Link} to='/'>
-              <p style={{fontSize:'24px',fontFamily:'Arima Madurai, cursive'}}>&nbsp;Paul Lewis Johnston&nbsp;</p>
+              <h1 style={{fontSize:'24px',fontFamily:'Arima Madurai, cursive'}}>&nbsp;Paul Lewis Johnston&nbsp;</h1>
             </Menu.Item>
             <Menu.Menu fitted='horizontally' position='right'>
               <Menu.Item icon name='Dashboard' as={Link} to='/dashboard'>
@@ -26,5 +25,6 @@ export default class GlobalNav extends Component {
         </Menu>
       </div>
     )
-  }
 }
+
+export default GlobalNav;

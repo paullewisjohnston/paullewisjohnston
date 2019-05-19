@@ -1,8 +1,8 @@
 [
   {
     "title" : "Education",
-    "background" : "#2E2E2E",
-    "color" : "#FFFFFF",
+    "background" : "color1",
+    "color" : "color2",
     "data":[
       {
         "type" : "education",
@@ -12,17 +12,17 @@
         "course" : "MEng Computer Science (Including Professional Experience)",
         "modules" : "Modules Include: Advanced Software Engineering, Algorithms: Analysis & Applications, High Performance Computing: Principles of Parallel Programming, Advanced Intelligent Information Systems, Information Systems Security, Agile and Component Based Development, Advanced Programming using C# and C++, Data Structures and Algorithms.",
         "image" : "qub.png",
-        "color" : "#FFFFFF",
-        "background" : "#2E2E2E",
-        "backgroundNext" : "#FFFFFF",
+        "color" : "color2",
+        "background" : "color1",
+        "backgroundNext" : "color2",
         "border" : "curved"
       }
     ]
   },
   {
     "title" : "Jobs",
-    "background" : "#FFFFFF",
-    "color" : "#000000",
+    "background" : "color2",
+    "color" : "color3",
     "data":[
       {
         "type" : "job",

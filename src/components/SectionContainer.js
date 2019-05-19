@@ -9,12 +9,12 @@ const SectionContainer = (props) => {
     <div>
       {props.data.map(items => (
         <div>
-        <Segment basic vertical style={{background:items.background}}>
-          <Divider inverted horizontal style={{color:items.color}}>{items.title}</Divider>
+        <Segment basic vertical style={{background:props.theme[items.background]}}>
+          <Divider inverted horizontal style={{color:props.theme[items.color]}}>{items.title}</Divider>
         </Segment>
         {items.data.map(item => (
           <Segment basic vertical style={{padding: '0 0'}}>
-            <Segment basic vertical style={{background:item.background, padding: '4em 0em', color:item.color}}>
+            <Segment basic vertical style={{background:props.theme[item.background], padding: '4em 0em', color:props.theme[item.color]}}>
               {(() => {
                 switch(item.type) {
                   case 'education':
@@ -26,11 +26,12 @@ const SectionContainer = (props) => {
                 }
               })()}
             </Segment>
-            <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={item.background} fill={item.backgroundNext}/>
+            <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={props.theme[item.background]} fill={props.theme[item.backgroundNext]}/>
           </Segment>
         ))}
       </div>
       ))}
+      <Border type='curved' scrollHeaderHeight={550} viewBoxHeight={20} background='white' fill={props.theme.footer}/>
     </div>
     );
   }
