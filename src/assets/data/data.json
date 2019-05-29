@@ -14,7 +14,7 @@
         "image" : "qub.png",
         "color" : "color2",
         "background" : "color1",
-        "backgroundNext" : "color2",
+        "background_next" : "color2",
         "border" : "curved"
       }
     ]
@@ -31,7 +31,7 @@
         "location" : "London, UK",
         "description" : "As a Business Analyst on the Application Development Team for Universal Production Music, my role involves liasing between the business and the Software Development Teams to plan & prioritise feature implementation, explore/review ideas and drive the direction of the application.  ",
         "skills" : "Business Analysis, Business Process Mapping, Project Management, SQL, Agile Sprint Planning & Prioritisation.",
-        "daterange" : "Jan 2018 – Present",
+        "daterange" : "Apr 2019 – Present",
         "image" : "umg.jpg"
       },
       {
@@ -41,7 +41,7 @@
         "location" : "Atlanta, US",
         "description" : "The USNI Mentorship programme connects future business leaders from Northern Ireland with high profile US corporations. Day-to-day work involved Digital Automation and Transformation projects, whilst being mentored in leadership and strategy.  ",
         "skills" : "Leadership, Business Process Mapping, Project Management, SQL, Sharepoint, PowerBI.",
-        "daterange" : "Jan 2018 – Present",
+        "daterange" : "Jan 2018 – Feb 2019",
         "image" : "cocacola.png"
       },
       {

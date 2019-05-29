@@ -26,7 +26,7 @@ const SectionContainer = (props) => {
                 }
               })()}
             </Segment>
-            <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={props.theme[item.background]} fill={props.theme[item.backgroundNext]}/>
+            <Border type={item.border} scrollHeaderHeight={100} viewBoxHeight={20} background={props.theme[item.background]} fill={props.theme[item.background_next]}/>
           </Segment>
         ))}
       </div>
