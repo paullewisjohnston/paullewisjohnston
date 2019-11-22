@@ -1,30 +1,45 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import {Container, Menu, Icon} from 'semantic-ui-react';
+import React, { useState } from 'react'
+import {Link} from "react-router-dom"
+import {Container} from 'semantic-ui-react'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink} from 'reactstrap'
 
-const GlobalNav = (props) => {
-    return (
-      <div style={{background:props.theme.navbar}}>
-        <Menu inverted borderless style={{background:props.theme.navbar}} >
-          <Container>
-            <Menu.Item fitted='horizontally' as={Link} to='/'>
-              <h1 style={{fontSize:'24px',fontFamily:'Arima Madurai, cursive'}}>&nbsp;Paul Lewis Johnston&nbsp;</h1>
-            </Menu.Item>
-            <Menu.Menu fitted='horizontally' position='right'>
-              <Menu.Item icon name='Dashboard' as={Link} to='/dashboard'>
-                <Icon name='chart pie' size='big' style={{color:'white'}}/>
-              </Menu.Item>
-              <Menu.Item icon name='Github' as='a' href='//github.com/paullewisjohnston' target='_blank'>
-                <Icon inverted name='github' size='big' style={{color:'white'}}/>
-              </Menu.Item>
-              <Menu.Item icon name='Home' as='a' href='//linkedin.com/in/paul-lewis-johnston-3abb6b100/' target='_blank'>
-                <Icon name='linkedin' size='big' style={{color:'white'}}/>
-              </Menu.Item>
-            </Menu.Menu>
-          </Container>
-        </Menu>
-      </div>
-    )
+
+function GlobalNav(props){
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+
+  // const [isActive, setIsActive] = useState(false);
+  // const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div style={{background:props.theme.navbar}}>
+    <Container style={{padding:'0px'}}>
+      <Navbar dark expand="md" style={{padding: '7px 0px'}}>
+        <NavbarBrand tag={Link} to="">
+        <h1 style={{fontSize:'20px',fontFamily:'Arima Madurai, cursive'}}>Paul Lewis Johnston</h1>
+        </NavbarBrand>
+        <NavbarToggler style={{border:'none'}} type='button' onClick={toggle}/>
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            {/* <NavItem>
+              <NavLink tag={Link} to="projects">Projects</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={Link} to="blog">Blog</NavLink>
+            </NavItem> */}
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </Container>
+    </div>
+  );
 }
 
-export default GlobalNav;
+export default GlobalNav

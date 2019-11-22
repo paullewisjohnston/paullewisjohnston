@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Curved from './borders/curved/Curved';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Curved from './borders/curved/Curved'
 
 const propTypes = {
   type: PropTypes.oneOf(['curved']),
@@ -11,7 +11,7 @@ const Border = (props) => {
     case 'curved':
       return <Curved {...props} />;
     default:
-      return null;
+      return null
     }
 }
 

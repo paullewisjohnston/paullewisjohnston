@@ -4,10 +4,8 @@ import BezierCurve from './BezierCurve'
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  height: PropTypes.number.isRequired,
   scrollHeaderHeight: PropTypes.number.isRequired,
   viewBoxHeight: PropTypes.number.isRequired,
-  fill: PropTypes.string.isRequired,
   background: PropTypes.string.isRequired
 };
 

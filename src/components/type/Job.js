@@ -9,7 +9,7 @@ const Job = (props) => (
             <Image size='small' avatar src={require("../../assets/images/"+props.item.image)}/>
           </Grid.Column>
           <Grid.Column verticalAlign='middle' width={12}>
-            <h1><b>{props.item.company},</b> {props.item.role}</h1>
+            <h2><b>{props.item.company},</b> {props.item.role}</h2>
             <p>{props.item.location}</p>
             <p>{props.item.daterange}</p>
             <p>{props.item.description}</p>
