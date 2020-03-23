@@ -6,9 +6,8 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink} from 'reactstrap'
+  Nav
+} from 'reactstrap'
 
 
 function GlobalNav(props){
