@@ -1,6 +1,19 @@
 import React from 'react'
 import { render } from 'react-dom'
 import App from './App'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
 
-render(<App />,document.getElementById('root'))
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Arima Madurai, cursive',
+      'Open Sans, sans-serif'
+    ].join(','),
+  },
+});
+
+render(
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
+  ,document.getElementById('root'))

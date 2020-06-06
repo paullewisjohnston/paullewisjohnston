@@ -1,24 +1,52 @@
 import React from 'react';
-import { Container, Grid, Image } from 'semantic-ui-react'
+import { Container, Grid, Avatar, Hidden } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles';
 
-const Education = (props) => (
-    <Container>
-      <Grid inverted stackable>
-        <Grid.Row verticalAlign='middle'>
-          <Grid.Column only='mobile' textAlign='center' width={4}>
-            <Image size='small' avatar src={require("../../assets/images/"+props.item.image)}/>
-          </Grid.Column>
-          <Grid.Column verticalAlign='middle' width={12}>
-            <h2><b>{props.item.university},</b> {props.item.course}</h2>
-            <p>{props.item.daterange}</p>
-            <p>{props.item.modules}</p>
-          </Grid.Column>
-          <Grid.Column only='computer tablet' textAlign='right' width={4}>
-            <Image size='medium' avatar src={require("../../assets/images/"+props.item.image)}/>
-          </Grid.Column>
-        </Grid.Row>
+const useStyles = makeStyles((theme) => ({
+  content:{
+    margin: 'auto',
+  },
+  sm: {
+    width: theme.spacing(20),
+    height: theme.spacing(20),
+    margin: 'auto',
+  },
+  md: {
+    width: theme.spacing(25),
+    height: theme.spacing(25),
+  },
+  lg: {
+    width: theme.spacing(30),
+    height: theme.spacing(30),
+  },
+}));
+
+export default function Education(props) {
+  const classes = useStyles();
+  return(
+  <Container fixed maxWidth='lg'>
+    <Grid container spacing={3}>
+      <Hidden mdUp>
+      <Grid item xs={12}>
+        <Avatar className={classes.sm} alt="University Logo" src={require("../../assets/images/"+props.item.image)} />
       </Grid>
-    </Container>
-);
-
-export default Education
+      </Hidden>
+      <Grid className={classes.content} item sm={12} md={9}>
+        <h2><b>{props.item.university},</b> {props.item.course}</h2>
+        <p>{props.item.daterange}</p>
+        <p>{props.item.modules}</p>
+      </Grid>
+      <Hidden smDown lgUp>
+        <Grid item xs={12} sm={3}>
+          <Avatar className={classes.md} alt="University Logo" src={require("../../assets/images/"+props.item.image)} />
+        </Grid>
+      </Hidden>
+      <Hidden mdDown>
+        <Grid item sm={3}>
+          <Avatar className={classes.lg} alt="University Logo" src={require("../../assets/images/"+props.item.image)} />
+        </Grid>
+      </Hidden>
+    </Grid>
+  </Container>
+  );
+}

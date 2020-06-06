@@ -1,44 +1,33 @@
-import React, { useState } from 'react'
-import {Link} from "react-router-dom"
-import {Container} from 'semantic-ui-react'
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav
-} from 'reactstrap'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { AppBar, Toolbar, Typography, Container} from '@material-ui/core';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  appbar:{
+    background: 'rgb(34, 34, 34)',
+  },
+  title: {
+    fontSize: 20,
+  },
+}));
 
-function GlobalNav(props){
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-
-  // const [isActive, setIsActive] = useState(false);
-  // const toggle = () => setIsOpen(!isOpen);
+export default function ButtonAppBar() {
+  const classes = useStyles();
 
   return (
-    <div style={{background:props.theme.navbar}}>
-    <Container style={{padding:'0px'}}>
-      <Navbar dark expand="md" style={{padding: '7px 0px'}}>
-        <NavbarBrand tag={Link} to="">
-        <h1 style={{fontSize:'20px',fontFamily:'Arima Madurai, cursive'}}>Paul Lewis Johnston</h1>
-        </NavbarBrand>
-        <NavbarToggler style={{border:'none'}} type='button' onClick={toggle}/>
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            {/* <NavItem>
-              <NavLink tag={Link} to="projects">Projects</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="blog">Blog</NavLink>
-            </NavItem> */}
-          </Nav>
-        </Collapse>
-      </Navbar>
-    </Container>
+    <div className={classes.root}>
+      <AppBar className={classes.appbar} position="static">
+        <Container fixed maxWidth='lg'>
+          <Toolbar disableGutters variant='dense'>
+            <Typography variant="h1" className={classes.title}>
+              Paul Lewis Johnston
+            </Typography>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </div>
   );
 }
-
-export default GlobalNav
