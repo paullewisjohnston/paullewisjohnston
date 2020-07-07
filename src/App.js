@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import { BrowserRouter, Route, Switch} from "react-router-dom"
 import GlobalNav from './components/GlobalNav'
 import Footer from './components/Footer'
 import Home from './pages/Home.js'
@@ -8,7 +8,7 @@ import './App.css'
 
 function App(){
   return(
-    <Router>
+    <BrowserRouter>
     <div className="App">
       <GlobalNav theme={Theme}/>
       <Switch>
@@ -18,7 +18,7 @@ function App(){
       </Switch>
       <Footer theme={Theme}/>
     </div>
-  </Router>
+  </BrowserRouter>
   );
 }
 export default App;
