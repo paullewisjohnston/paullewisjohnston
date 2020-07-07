@@ -28,7 +28,7 @@ export default function Education(props) {
     <Grid container spacing={3}>
       <Hidden mdUp>
       <Grid item xs={12}>
-        <Avatar className={classes.sm} alt="University Logo" src={require("../../assets/images/"+props.item.image)} />
+        <Avatar className={classes.sm} alt="Queen's University Belfast" src={require("../../assets/images/"+props.item.image)} />
       </Grid>
       </Hidden>
       <Grid className={classes.content} item sm={12} md={9}>
@@ -38,12 +38,12 @@ export default function Education(props) {
       </Grid>
       <Hidden smDown lgUp>
         <Grid item xs={12} sm={3}>
-          <Avatar className={classes.md} alt="University Logo" src={require("../../assets/images/"+props.item.image)} />
+          <Avatar className={classes.md} alt="Queen's University Belfast" src={require("../../assets/images/"+props.item.image)} />
         </Grid>
       </Hidden>
       <Hidden mdDown>
         <Grid item sm={3}>
-          <Avatar className={classes.lg} alt="University Logo" src={require("../../assets/images/"+props.item.image)} />
+          <Avatar className={classes.lg} alt="Queen's University Belfast" src={require("../../assets/images/"+props.item.image)} />
         </Grid>
       </Hidden>
     </Grid>

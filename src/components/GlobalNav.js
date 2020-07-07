@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, Container} from '@material-ui/core';
+import { AppBar, Toolbar, Container} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,9 +22,7 @@ export default function ButtonAppBar() {
       <AppBar className={classes.appbar} position="static">
         <Container fixed maxWidth='lg'>
           <Toolbar disableGutters variant='dense'>
-            <Typography variant="h1" className={classes.title}>
-              Paul Lewis Johnston
-            </Typography>
+            <h1 className={classes.title}>Paul Lewis Johnston</h1>
           </Toolbar>
         </Container>
       </AppBar>

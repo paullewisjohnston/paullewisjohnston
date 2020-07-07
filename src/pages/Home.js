@@ -5,8 +5,7 @@ import dataJobs from '../assets/data/dataJobs.json';
 
 function Home(props){
   return(
-    <div>
-      {console.log(dataJobs[0])}
+    <div style={{background:props.theme['color1']}}>
       <ListContainer data={dataEducation} theme={props.theme} background={dataEducation[0].background} color={dataEducation[0].color} title={dataEducation[0].type}/>
       <ListContainer data={dataJobs} theme={props.theme} background={dataJobs[0].background} colorTitle={dataJobs[0].colorTitle} title={dataJobs[0].type}/>
     </div>
