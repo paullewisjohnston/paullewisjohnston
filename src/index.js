@@ -6,9 +6,10 @@ import { createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
-      'Arima Madurai, cursive',
-      'Open Sans, sans-serif'
+      '"Lato", sans-serif',
+      '"Open Sans", sans-serif'
     ].join(','),
+    textTransform: 'none',
   },
 });
 
