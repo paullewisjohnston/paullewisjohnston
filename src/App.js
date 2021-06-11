@@ -13,7 +13,7 @@ import GoCardlessFailed from './pages/GoCardlessFailed'
 function App(){
   return(
   <div className="App">
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <GlobalNav theme={Theme}/>
         <Switch> 
           <Route exact path='/'>
