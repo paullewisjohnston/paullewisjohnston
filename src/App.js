@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch} from "react-router-dom"
+import { HashRouter, Route, Switch} from "react-router-dom"
 import GlobalNav from './components/GlobalNav'
 import Footer from './components/Footer'
 import Home from './pages/Home.js'
@@ -13,13 +13,10 @@ import GoCardlessFailed from './pages/GoCardlessFailed'
 function App(){
   return(
   <div className="App">
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <GlobalNav theme={Theme}/>
         <Switch> 
-          <Route exact path='/'>
-            <Home theme={Theme}/>
-          </Route>
-          <Route exact path='/gocardless'>
+          <Route exact path='/gocardless/'>
             <GoCardless theme={Theme}/>
           </Route>
           <Route exact path='/gocardless-redirect'>
@@ -31,9 +28,12 @@ function App(){
           <Route exact path='/gocardless-failed'>
             <GoCardlessFailed theme={Theme}/>
           </Route>
+          <Route exact path='/'>
+            <Home theme={Theme}/>
+          </Route>
         </Switch>
       <Footer theme={Theme}/>
-    </BrowserRouter>
+    </HashRouter>
   </div>
   );
 }

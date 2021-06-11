@@ -10,6 +10,8 @@ function GoCardlessRedirect(props){
   let location = useLocation();
   const parsed = qs.parse(location.search);
   const redirect_flow_id = parsed.redirect_flow_id;
+  console.log(redirect_flow_id)
+  console.log("REDIRECT")
 
   useEffect(() => {
     fetch(`https://3f9fhnxjd4.execute-api.eu-west-2.amazonaws.com/default/goCardlessCompletionService?redirect_flow_id=${redirect_flow_id}`)
