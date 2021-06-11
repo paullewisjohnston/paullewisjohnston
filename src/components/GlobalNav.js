@@ -30,32 +30,32 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
   const [menuOpen, setMenuOpen] = useState(false);
-  //const menuItems = ['Home','Projects','Roadmap'];
+  const menuItems = ['Home','GoCardless'];
 
   return (
     <div className={classes.root}>
       <Toolbar variant='dense' disableGutters/>
-      {/* {!menuOpen ?  */}
-      <AppBar position="fixed" elevation="0" className={classes.appbar}>
+      {!menuOpen ? 
+      <AppBar position="fixed" elevation={0} className={classes.appbar}>
         <Container fixed maxWidth='lg'>
           <Toolbar variant='dense' disableGutters>
             <Link component={RouterLink} to="/" underline='none' variant='h1' color="inherit" className={classes.title}>Paul Lewis Johnston</Link>
-            {/* <Hidden smDown>
+            <Hidden smDown>
               {menuItems.map((menuItem, index) => (
-              <Link underline='none' component={RouterLink} to={index===0 ? '/' : menuItem.toLowerCase()} color="inherit" className={classes.menuItem}>{menuItem}</Link>
+              <Link key={index} underline='none' component={RouterLink} to={index===0 ? '/' : menuItem.toLowerCase()} color="inherit" className={classes.menuItem}>{menuItem}</Link>
               ))}
             </Hidden>            
             <Hidden mdUp>
               <IconButton edge="end" color="inherit" aria-label="menu" onClick={() => setMenuOpen(!menuOpen)}>
                 <MenuIcon/>
               </IconButton>
-            </Hidden> */}
+            </Hidden>
           </Toolbar>
         </Container>
       </AppBar>
-      {/*: null} 
+      : null} 
       <Drawer
-      elevation="0"
+        elevation={0}
         classes={{ paper: classes.paper }}
         variant="temporary"
         anchor="top"
@@ -64,12 +64,12 @@ export default function ButtonAppBar() {
       >
         <List>
           {menuItems.map((menuItem, index) => (
-            <ListItem component={RouterLink} to={index===0 ? '/' : menuItem.toLowerCase()} disableRipple button key={menuItem} onClick={()=>setMenuOpen(false)}>
-              <ListItemText disableRipple primary={menuItem} />
+            <ListItem component={RouterLink} to={index===0 ? '/' : menuItem.toLowerCase()} button key={menuItem} onClick={()=>setMenuOpen(false)}>
+              <ListItemText primary={menuItem} />
             </ListItem>
           ))}
         </List>
-      </Drawer> */}
+      </Drawer>
     </div>
   );
 }

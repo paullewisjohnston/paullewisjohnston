@@ -3,9 +3,12 @@ import { BrowserRouter, Route, Switch} from "react-router-dom"
 import GlobalNav from './components/GlobalNav'
 import Footer from './components/Footer'
 import Home from './pages/Home.js'
-import Products from './pages/Products.js'
 import Theme from './assets/data/theme.json'
 import './App.css'
+import GoCardless from './pages/GoCardless'
+import GoCardlessRedirect from './pages/GoCardlessRedirect'
+import GoCardlessSuccess from './pages/GoCardlessSuccess'
+import GoCardlessFailed from './pages/GoCardlessFailed'
 
 function App(){
   return(
@@ -16,10 +19,18 @@ function App(){
           <Route exact path='/'>
             <Home theme={Theme}/>
           </Route>
-          <Route exact path='/products'>
-            <Products theme={Theme}/>
+          <Route exact path='/gocardless'>
+            <GoCardless theme={Theme}/>
           </Route>
-            {/* <Route path={‘/user/:id’} component={User}/>   */}
+          <Route exact path='/gocardless-redirect'>
+            <GoCardlessRedirect theme={Theme}/>
+          </Route>
+          <Route exact path='/gocardless-success'>
+            <GoCardlessSuccess theme={Theme}/>
+          </Route>
+          <Route exact path='/gocardless-failed'>
+            <GoCardlessFailed theme={Theme}/>
+          </Route>
         </Switch>
       <Footer theme={Theme}/>
     </BrowserRouter>

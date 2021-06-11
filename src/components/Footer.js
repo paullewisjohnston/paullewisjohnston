@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     alignItems: 'center',
     fontSize: '20px',
-    color: 'default',
+    //color: 'default',
     background: '#FBFBFB',
   },
   title: {
@@ -38,7 +38,7 @@ export default function Footer() {
           </Grid>
           <Grid className={classes.social} item xs={12} sm={6}>
             <IconButton aria-label="linkedin" href='//linkedin.com/in/paul-lewis-johnston-3abb6b100/' target='_blank'>
-              <LinkedIn color="default"/>
+              <LinkedIn/>
             </IconButton>
             <IconButton aria-label="github" href='//github.com/paullewisjohnston' target='_blank'>
             <GitHub/>

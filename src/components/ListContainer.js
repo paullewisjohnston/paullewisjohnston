@@ -8,8 +8,8 @@ const ListContainer = (props) => {
     <div>
       {
       props.data.map(item => (
-        <div key={item.id} basic vertical style={{padding: '0 0'}}>
-          <div basic vertical style={{padding: '4em 0em', background:props.theme[props.background] ,color:props.theme[item.color]}}>
+        <div key={item.id} basic="true" vertical="true" style={{padding: '0 0'}}>
+          <div basic="true" vertical="true" style={{padding: '4em 0em', background:props.theme[props.background] ,color:props.theme[item.color]}}>
             {(() => {
               switch(item.type) {
                 case 'education':
